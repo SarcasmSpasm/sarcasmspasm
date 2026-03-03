@@ -6,11 +6,11 @@
     <title>Sarcasm Spasm: Serious Quality. Questionable Tone.</title>
     <style>
         :root {
-            --primary-color: #55555; /* Dark Grey */
-            --secondary-color: #ffeead; /* Light, playful yellow */
-            --dark-color: #333;  /* Dark Header and Block Shadow */
-            --light-bg: #ffffff;  /* White Blocks Behind Text */
-            --font-family: 'Comic Sans MS', cursive, sans-serif;
+            --primary-color: #FFC72C; /* Bold Yellow - Primary logo color */
+            --secondary-color: #F5F5DC; /* Beige/Light Gray - Light, contrasting background */
+            --dark-color: #1A1A1A; /* Near Black - Darkest color */
+            --light-bg: #FFFFFF; /* Pure White */
+            --font-family: 'Arial', sans-serif; /* Modern, professional font */
         }
         body {
             font-family: var(--font-family);
@@ -21,17 +21,17 @@
             line-height: 1.6;
         }
         header {
-            background-color: var(--primary-color);
-            color: var(--light-bg);
+            background-color: var(--dark-color);
+            color: var(--primary-color);
             padding: 20px 0;
             text-align: center;
-            border-bottom: 5px solid var(--dark-color);
+            border-bottom: 5px solid var(--primary-color);
         }
         header h1 {
             margin: 0;
             font-size: 2.5em;
             letter-spacing: 3px;
-            text-shadow: 2px 2px var(--dark-color);
+            text-shadow: 2px 2px var(--primary-color);
         }
         header p {
             font-style: italic;
@@ -41,7 +41,7 @@
         nav {
             text-align: center;
             padding: 10px 0;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
             border-bottom: 3px solid var(--dark-color);
         }
         nav a {
@@ -51,11 +51,11 @@
             font-weight: bold;
             padding: 5px 10px;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
         }
         nav a:hover {
             background-color: var(--primary-color);
-            color: var(--light-bg);
+            color: var(--dark-color);
         }
         .container {
             width: 90%;
@@ -78,7 +78,7 @@
             padding: 10px;
             margin-bottom: 30px;
             background-color: var(--dark-color);
-            color: var(--secondary-color);
+            color: var(--primary-color);
             border-radius: 5px;
         }
         .product-grid {
@@ -88,7 +88,7 @@
             justify-content: space-around;
         }
         .product-card {
-            background-color: #f9f9f9;
+            background-color: var(--light-bg);
             border: 3px solid var(--dark-color);
             padding: 20px;
             width: calc(50% - 40px);
@@ -98,16 +98,28 @@
             box-shadow: 5px 5px 0px var(--secondary-color);
         }
         .product-card:hover {
-            transform: translateY(-5px) rotate(1deg);
+            transform: translateY(-5px) rotate(0.5deg);
         }
         .product-card h3 {
             color: var(--primary-color);
             margin-top: 0;
             font-size: 1.5em;
         }
+        .product-image-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #CCCCCC; /* Light grey placeholder */
+            border: 2px dashed var(--dark-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-color);
+            font-style: italic;
+        }
         .price {
             font-weight: bold;
-            color: green;
+            color: #006400; /* Dark Green */
             display: block;
             margin: 10px 0;
             font-size: 1.2em;
@@ -115,7 +127,7 @@
         .order-button {
             display: inline-block;
             background-color: var(--primary-color);
-            color: var(--light-bg);
+            color: var(--dark-color);
             padding: 10px 15px;
             text-decoration: none;
             border: none;
@@ -125,12 +137,12 @@
             transition: background-color 0.3s;
         }
         .order-button:hover {
-            background-color: #e74c3c;
+            background-color: #FFDA6E; /* Slightly lighter yellow */
         }
         .order-section {
             margin-top: 40px;
             padding: 20px;
-            background-color: #fff3e0;
+            background-color: var(--secondary-color);
             border: 3px solid var(--primary-color);
             border-radius: 10px;
         }
@@ -145,7 +157,6 @@
     </style>
 </head>
 <body>
-
     <header>
         <h1>Sarcasm Spasm</h1>
         <p>Serious Quality. Questionable Tone.</p>
@@ -153,12 +164,11 @@
 
     <nav>
         <a href="#bags">Bags</a>
-        <a href="#prints">3D Prints</a>
+        <a href="#3dprints">3D Prints</a>
         <a href="#order">Order</a>
     </nav>
 
     <div class="container">
-
         <div class="tagline">
             Smart designs with even smarter remarks. See something you like? Send an order request and we will reply with availability and cost. Order by email.
         </div>
@@ -166,70 +176,66 @@
         <section id="bags">
             <h2>Bags (Because carrying stuff is important, duh)</h2>
             <div class="product-grid">
-
                 <div class="product-card">
+                    <div class="product-image-placeholder">Image Placeholder: An Apple a Day</div>
                     <h3>An Apple a Day</h3>
                     <p>"An apple a day keeps anyone away if you throw it hard enough"</p>
                     <span class="price">$4.99</span>
-                    <a href="#order-info" class="order-button">Order Now!</a>
+                    <a href="#order" class="order-button">Order Now!</a>
                 </div>
-
                 <div class="product-card">
+                    <div class="product-image-placeholder">Image Placeholder: Bad Sign</div>
                     <h3>Bad Sign</h3>
                     <p>"This is a bad sign"</p>
                     <span class="price">$4.99</span>
-                    <a href="#order-info" class="order-button">Order Now!</a>
+                    <a href="#order" class="order-button">Order Now!</a>
                 </div>
-
                 <div class="product-card">
+                    <div class="product-image-placeholder">Image Placeholder: Slipping Sock Syndrome</div>
                     <h3>Slipping Sock Syndrome</h3>
                     <p>"I walk around like everything is fine but deep down my sock is slipping off"</p>
                     <span class="price">$4.99</span>
-                    <a href="#order-info" class="order-button">Order Now!</a>
+                    <a href="#order" class="order-button">Order Now!</a>
                 </div>
-
                 <div class="product-card">
+                    <div class="product-image-placeholder">Image Placeholder: Sentence Interrupter</div>
                     <h3>Sentence Interrupter</h3>
                     <p>"I'm sorry, did the middle of my sentence interrupt the beginning of yours?!"</p>
                     <span class="price">$4.99</span>
-                    <a href="#order-info" class="order-button">Order Now!</a>
+                    <a href="#order" class="order-button">Order Now!</a>
                 </div>
-
             </div>
         </section>
 
-        <section id="prints">
+        <section id="3dprints">
             <h2>3D Printed Items (We used our allowance money for filament)</h2>
             <div class="product-grid">
-
                 <div class="product-card">
+                    <div class="product-image-placeholder">Image Placeholder: Character Hopper</div>
                     <h3>Character Hopper</h3>
                     <p>Simple crank operated hopping character. Different characters available. (We might run out of characters).</p>
                     <span class="price">$2.99</span>
-                    <a href="#order-info" class="order-button">Order Now!</a>
+                    <a href="#order" class="order-button">Order Now!</a>
                 </div>
-                
             </div>
         </section>
 
         <section id="order" class="order-section">
             <h2>Order Request (Don't send us weird stuff)</h2>
-            <h3>Email to order:</h3>
-            <p>Include item name, quantity, shipping town, and any custom text. (We only accept payment in imaginary gold coins or actual money, we'll figure it out).</p>
-            
-            <a href="mailto:yourbusiness@email.com?subject=Order%20Request%20from%20Sarcasm%20Spasm" class="order-button" id="order-info">Click Here to Email Your Order!</a>
-            
-            <!-- JavaScript for dynamic year in footer -->
-            <script>
-                document.getElementById("year").textContent = new Date().getFullYear();
-            </script>
+            <p>Tip: Using a form helps avoid spam. You can also make a dedicated business email.</p>
+            <p>Fast option: email an order request! Email to order: Include item name, quantity, shipping town, and any custom text. (We only accept payment in imaginary gold coins or actual money, we'll figure it out).</p>
+            <a href="mailto:your-email@example.com?subject=Order%20Request%20from%20Website" class="order-button" style="display: block; width: fit-content; margin: 20px auto;">Click Here to Email Your Order!</a>
         </section>
 
     </div>
 
     <footer>
-        © <span id="year"></span> Sarcasm Spasm
+        <p id="year"></p>
+        <p>© Sarcasm Spasm</p>
     </footer>
 
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
