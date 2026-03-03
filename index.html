@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarcasm Spasm: Serious Quality. Questionable Tone.</title>
     <style>
+        /* Color Adjustments: Lively Yellow, Black, Grey tones */
         :root {
-            --primary-color: #FFC72C; /* Bold Yellow - Primary logo color */
-            --secondary-color: #F5F5DC; /* Beige/Light Gray - Light, contrasting background */
-            --dark-color: #1A1A1A; /* Near Black - Darkest color */
-            --light-bg: #FFFFFF; /* Pure White */
-            --font-family: 'Arial', sans-serif; /* Modern, professional font */
+            --primary-color: #FFD700; /* Lively Bright Yellow (Gold/Lemon) */
+            --secondary-color: #EFEFEF; /* Very Light Grey/Off-White for background contrast */
+            --dark-color: #1A1A1A; /* Near Black */
+            --light-bg: #FFFFFF; /* Pure White for main content areas */
+            --accent-grey: #A0A0A0; /* Medium Grey for subtle borders/accents */
+            --dark-green-accent: #006400; /* Dark Green for price (optional complementary color) */
+            --lighter-yellow: #FFE033; /* Slightly lighter yellow for hover effects */
+
+            /* Font Adjustment: Modern and Youthful (Inter is modern, clean, and versatile) */
+            --font-family: 'Inter', 'Helvetica Neue', sans-serif;
         }
+
         body {
             font-family: var(--font-family);
             background-color: var(--secondary-color);
@@ -20,141 +27,199 @@
             padding: 0;
             line-height: 1.6;
         }
+
         header {
             background-color: var(--dark-color);
             color: var(--primary-color);
-            padding: 20px 0;
+            padding: 25px 0;
             text-align: center;
-            border-bottom: 5px solid var(--primary-color);
+            border-bottom: 6px solid var(--primary-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         header h1 {
             margin: 0;
-            font-size: 2.5em;
-            letter-spacing: 3px;
-            text-shadow: 2px 2px var(--primary-color);
+            font-size: 2.8em;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 0px var(--accent-grey);
         }
+
         header p {
             font-style: italic;
-            margin-top: 5px;
-            font-size: 1.1em;
+            margin-top: 8px;
+            font-size: 1.15em;
+            color: #CCCCCC; /* Lighter grey for subtitle */
         }
+
         nav {
             text-align: center;
-            padding: 10px 0;
-            background-color: rgba(255, 255, 255, 0.9);
+            padding: 12px 0;
+            background-color: var(--light-bg);
             border-bottom: 3px solid var(--dark-color);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         nav a {
             color: var(--dark-color);
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 5px;
+            margin: 0 20px;
+            font-weight: 600; /* Semi-bold for modern feel */
+            padding: 8px 15px;
+            border-radius: 4px;
             transition: background-color 0.3s, color 0.3s;
         }
+
         nav a:hover {
             background-color: var(--primary-color);
             color: var(--dark-color);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
         }
+
         .container {
             width: 90%;
             max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
+            margin: 30px auto;
+            padding: 30px;
             background-color: var(--light-bg);
-            border: 8px dashed var(--primary-color);
-            box-shadow: 10px 10px 0px var(--dark-color);
+            border: 6px solid var(--primary-color);
+            /* Box shadow uses dark color, but softer */
+            box-shadow: 12px 12px 0px 0px var(--dark-color);
         }
+
         h2 {
             color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 5px;
-            margin-top: 30px;
+            border-bottom: 3px dotted var(--accent-grey);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8em;
         }
+
         .tagline {
             text-align: center;
-            font-size: 1.3em;
-            padding: 10px;
-            margin-bottom: 30px;
+            font-size: 1.4em;
+            padding: 15px;
+            margin: 25px auto 40px auto;
+            max-width: 800px;
             background-color: var(--dark-color);
             color: var(--primary-color);
-            border-radius: 5px;
+            border-radius: 8px;
+            border: 2px solid var(--accent-grey);
         }
+
         .product-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 30px;
-            justify-content: space-around;
+            justify-content: space-between; /* Adjusted for better spacing */
         }
+
         .product-card {
             background-color: var(--light-bg);
             border: 3px solid var(--dark-color);
             padding: 20px;
-            width: calc(50% - 40px);
+            width: calc(50% - 35px); /* Adjusted width calculation for gap */
             box-sizing: border-box;
-            border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
-            box-shadow: 5px 5px 0px var(--secondary-color);
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 6px 6px 0px var(--accent-grey);
         }
+
         .product-card:hover {
-            transform: translateY(-5px) rotate(0.5deg);
+            transform: translateY(-7px) rotate(0.2deg);
+            box-shadow: 10px 10px 0px var(--primary-color);
         }
+
         .product-card h3 {
             color: var(--primary-color);
             margin-top: 0;
-            font-size: 1.5em;
+            font-size: 1.6em;
+            border-bottom: 1px solid var(--secondary-color);
+            padding-bottom: 5px;
         }
+
         .product-image-placeholder {
             width: 100%;
             height: 200px;
-            background-color: #CCCCCC; /* Light grey placeholder */
-            border: 2px dashed var(--dark-color);
+            background-color: #F0F0F0; /* Light grey placeholder */
+            border: 3px dashed var(--dark-color);
             margin-bottom: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--dark-color);
+            color: var(--accent-grey);
             font-style: italic;
+            font-size: 1.1em;
+            border-radius: 5px;
         }
+
         .price {
-            font-weight: bold;
-            color: #006400; /* Dark Green */
+            font-weight: 700;
+            color: var(--dark-green-accent);
             display: block;
-            margin: 10px 0;
-            font-size: 1.2em;
+            margin: 15px 0;
+            font-size: 1.4em;
         }
+
         .order-button {
             display: inline-block;
             background-color: var(--primary-color);
             color: var(--dark-color);
-            padding: 10px 15px;
+            padding: 12px 20px;
             text-decoration: none;
-            border: none;
-            border-radius: 5px;
+            border: 2px solid var(--dark-color);
+            border-radius: 6px;
             cursor: pointer;
+            font-weight: 700;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .order-button:hover {
+            background-color: var(--lighter-yellow);
+            border-color: var(--dark-color);
+        }
+
+        .order-section {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #F5F5F5; /* Slightly darker than main body BG */
+            border: 4px solid var(--primary-color);
+            border-radius: 15px;
+        }
+
+        .order-section a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: var(--dark-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s;
         }
-        .order-button:hover {
-            background-color: #FFDA6E; /* Slightly lighter yellow */
+
+        .order-section a:hover {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
         }
-        .order-section {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: var(--secondary-color);
-            border: 3px solid var(--primary-color);
-            border-radius: 10px;
-        }
+
         footer {
             text-align: center;
             padding: 15px 0;
-            margin-top: 30px;
-            border-top: 3px solid var(--dark-color);
-            font-size: 0.9em;
-            color: var(--dark-color);
+            margin-top: 40px;
+            border-top: 3px solid var(--accent-grey);
+            font-size: 0.95em;
+            color: var(--accent-grey);
+        }
+
+        /* Responsiveness for product grid */
+        @media (max-width: 900px) {
+            .product-card {
+                width: 100%;
+            }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -164,7 +229,7 @@
 
     <nav>
         <a href="#bags">Bags</a>
-        <a href="#3dprints">3D Prints</a>
+        <a href="#3d-prints">3D Prints</a>
         <a href="#order">Order</a>
     </nav>
 
@@ -174,8 +239,9 @@
         </div>
 
         <section id="bags">
-            <h2>Bags (Because carrying stuff is important, duh)</h2>
+            <h2>Bags <span style="font-size: 0.6em; color: var(--accent-grey);">(Because carrying stuff is important, duh)</span></h2>
             <div class="product-grid">
+                
                 <div class="product-card">
                     <div class="product-image-placeholder">Image Placeholder: An Apple a Day</div>
                     <h3>An Apple a Day</h3>
@@ -183,6 +249,7 @@
                     <span class="price">$4.99</span>
                     <a href="#order" class="order-button">Order Now!</a>
                 </div>
+
                 <div class="product-card">
                     <div class="product-image-placeholder">Image Placeholder: Bad Sign</div>
                     <h3>Bad Sign</h3>
@@ -190,6 +257,7 @@
                     <span class="price">$4.99</span>
                     <a href="#order" class="order-button">Order Now!</a>
                 </div>
+
                 <div class="product-card">
                     <div class="product-image-placeholder">Image Placeholder: Slipping Sock Syndrome</div>
                     <h3>Slipping Sock Syndrome</h3>
@@ -197,6 +265,7 @@
                     <span class="price">$4.99</span>
                     <a href="#order" class="order-button">Order Now!</a>
                 </div>
+
                 <div class="product-card">
                     <div class="product-image-placeholder">Image Placeholder: Sentence Interrupter</div>
                     <h3>Sentence Interrupter</h3>
@@ -204,12 +273,14 @@
                     <span class="price">$4.99</span>
                     <a href="#order" class="order-button">Order Now!</a>
                 </div>
+
             </div>
         </section>
 
-        <section id="3dprints">
-            <h2>3D Printed Items (We used our allowance money for filament)</h2>
+        <section id="3d-prints">
+            <h2>3D Printed Items <span style="font-size: 0.6em; color: var(--accent-grey);">(We used our allowance money for filament)</span></h2>
             <div class="product-grid">
+                
                 <div class="product-card">
                     <div class="product-image-placeholder">Image Placeholder: Character Hopper</div>
                     <h3>Character Hopper</h3>
@@ -217,21 +288,20 @@
                     <span class="price">$2.99</span>
                     <a href="#order" class="order-button">Order Now!</a>
                 </div>
+
             </div>
         </section>
 
         <section id="order" class="order-section">
-            <h2>Order Request (Don't spam us, though)</h2>
-            <p>Fast option: email an order request! Email to order: Include item name, quantity, shipping town, and any custom text. 
-                (We only accept payment in imaginary gold coins or actual money, we'll figure it out).</p>
-            <a href="mailto:your-email@example.com?subject=Order%20Request%20from%20Website" class="order-button" style="display: block; width: fit-content; margin: 20px auto;">Click Here to Email Your Order!</a>
+            <h2>Order Request <span style="font-size: 0.6em; color: var(--accent-grey);">(Don't spam us, though)</span></h2>
+            <p>Fast option: email an order request!</p>
+            <p>Email to order: Include item name, quantity, shipping town, and any custom text. (We only accept payment in imaginary gold coins or actual money, we'll figure it out).</p>
+            <a href="mailto:your-email@example.com?subject=Order%20Request%20from%20Website&body=Item(s)%20I%20want:%0AQuantity:%0AShipping%20Town:%0ACustom%20Notes:%0A%0A(Please%20include%20the%20item%20name%20exactly%20as%20listed%20on%20the%20site!)">Click Here to Email Your Order!</a>
         </section>
-
     </div>
 
     <footer>
-        <p id="year"></p>
-        <p>© Sarcasm Spasm</p>
+        &copy; <span id="year"></span> Sarcasm Spasm
     </footer>
 
     <script>
