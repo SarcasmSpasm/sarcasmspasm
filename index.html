@@ -1,10 +1,131 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Welcome to My Site</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sarcasm Spasm</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Sublimated sarcasm and 3D printed chaos. Emotional damage included." />
 </head>
+
 <body>
-    <h1>Hello World!</h1>
-    <p>This is my GitHub Pages site.</p>
+  <header class="wrap">
+    <div class="brand">
+      <h1>Sarcasm Spasm</h1>
+      <p class="tagline">Serious Quality. Questionable Tone.</p>
+    </div>
+
+    <nav class="nav">
+      <a href="#bags">Bags</a>
+      <a href="#prints">3D Prints</a>
+      <a href="#order">Order</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h2>Smart designs with even smarter remarks.</h2>
+        <p>
+          See something you like? Send an order request and we will reply with availability and cost.
+        </p>
+        <a class="button" href="#order">Order by email</a>
+      </div>
+    </section>
+
+    <section id="bags" class="section">
+      <h3>Bags</h3>
+      <div class="grid">
+        <article class="card">
+          <img src="images/bag1.jpg" alt="An Apple a Day" />
+          <div class="cardBody">
+            <h4>An Apple a Day</h4>
+            <p>"An apple a day keeps anyone away if you throw it hard enough".</p>
+            <div class="row">
+              <span class="price">$4.99</span>
+              <a class="button small" href="#order">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/bag2.jpg" alt="Sublimated bag with meme design" />
+          <div class="cardBody">
+            <h4>Bad Sign</h4>
+            <p>"This is a bad sign"</p>
+            <div class="row">
+              <span class="price">$4.99</span>
+              <a class="button small" href="#order">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/bag3.jpg" alt="Sublimated bag with meme design" />
+          <div class="cardBody">
+            <h4>Sock</h4>
+            <p>"I walk around like everything is fine but deep down my sock is slipping off"</p>
+            <div class="row">
+              <span class="price">$4.99</span>
+              <a class="button small" href="#order">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/bag4.jpg" alt="Sublimated bag with meme design" />
+          <div class="cardBody">
+            <h4>Sentence</h4>
+            <p>"I'm sorry, did the middle of my sentence interrupt the beginning of yours?!"</p>
+            <div class="row">
+              <span class="price">$4.99</span>
+              <a class="button small" href="#order">Order</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="prints" class="section">
+      <h3>3D Printed Items</h3>
+      <div class="grid">
+        <article class="card">
+          <img src="images/print1.jpg" alt="3D printed item" />
+          <div class="cardBody">
+            <h4>Character Hopper</h4>
+            <p>Simple crank operated hopping character. Different characters available.</p>
+            <div class="row">
+              <span class="price">$2.99</span>
+              <a class="button small" href="#order">Order</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="order" class="section">
+      <h3>Order request</h3>
+      <p class="note">
+        Tip: Using a form helps avoid spam. You can also make a dedicated business email.
+      </p>
+
+      <!-- Option A: simple mailto (fast, but can be spammy if you show the email elsewhere) -->
+      <div class="orderBox">
+        <p><strong>Fast option:</strong> email an order request</p>
+        <a class="button" href="mailto:sarcasmspasm10@gmail.com?subject=Sarcasm%20Spasm%20Custom%20Order%20Request">Email to order</a>
+        <p class="tiny">
+          Include item name, quantity, shipping town, and any custom text.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>© <span id="year"></span> Sarcasm Spasm</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
