@@ -1,131 +1,237 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sarcasm Spasm</title>
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Sublimated sarcasm and 3D printed chaos. Emotional damage included." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcasm Spasm: Serious Quality. Questionable Tone.</title>
+    <style>
+        :root {
+            --primary-color: #ff6f61; /* Funky Coral/Red */
+            --secondary-color: #ffeead; /* Light, playful yellow */
+            --dark-color: #333;
+            --light-bg: #ffffff;
+            --font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        body {
+            font-family: var(--font-family);
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-bg);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--dark-color);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px var(--dark-color);
+        }
+        header p {
+            font-style: italic;
+            margin-top: 5px;
+            font-size: 1.1em;
+        }
+        nav {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-bottom: 3px solid var(--dark-color);
+        }
+        nav a {
+            color: var(--dark-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--light-bg);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--light-bg);
+            border: 8px dashed var(--primary-color);
+            box-shadow: 10px 10px 0px var(--dark-color);
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        .tagline {
+            text-align: center;
+            font-size: 1.3em;
+            padding: 10px;
+            margin-bottom: 30px;
+            background-color: var(--dark-color);
+            color: var(--secondary-color);
+            border-radius: 5px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-around;
+        }
+        .product-card {
+            background-color: #f9f9f9;
+            border: 3px solid var(--dark-color);
+            padding: 20px;
+            width: calc(50% - 40px);
+            box-sizing: border-box;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 5px 5px 0px var(--secondary-color);
+        }
+        .product-card:hover {
+            transform: translateY(-5px) rotate(1deg);
+        }
+        .product-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .price {
+            font-weight: bold;
+            color: green;
+            display: block;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .order-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--light-bg);
+            padding: 10px 15px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .order-button:hover {
+            background-color: #e74c3c;
+        }
+        .order-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff3e0;
+            border: 3px solid var(--primary-color);
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+            border-top: 3px solid var(--dark-color);
+            font-size: 0.9em;
+            color: var(--dark-color);
+        }
+    </style>
 </head>
-
 <body>
-  <header class="wrap">
-    <div class="brand">
-      <h1>Sarcasm Spasm</h1>
-      <p class="tagline">Serious Quality. Questionable Tone.</p>
+
+    <header>
+        <h1>Sarcasm Spasm</h1>
+        <p>Serious Quality. Questionable Tone.</p>
+    </header>
+
+    <nav>
+        <a href="#bags">Bags</a>
+        <a href="#prints">3D Prints</a>
+        <a href="#order">Order</a>
+    </nav>
+
+    <div class="container">
+
+        <div class="tagline">
+            Smart designs with even smarter remarks. See something you like? Send an order request and we will reply with availability and cost. Order by email.
+        </div>
+
+        <section id="bags">
+            <h2>Bags (Because carrying stuff is important, duh)</h2>
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <h3>An Apple a Day</h3>
+                    <p>"An apple a day keeps anyone away if you throw it hard enough"</p>
+                    <span class="price">$4.99</span>
+                    <a href="#order-info" class="order-button">Order Now!</a>
+                </div>
+
+                <div class="product-card">
+                    <h3>Bad Sign</h3>
+                    <p>"This is a bad sign"</p>
+                    <span class="price">$4.99</span>
+                    <a href="#order-info" class="order-button">Order Now!</a>
+                </div>
+
+                <div class="product-card">
+                    <h3>Slipping Sock Syndrome</h3>
+                    <p>"I walk around like everything is fine but deep down my sock is slipping off"</p>
+                    <span class="price">$4.99</span>
+                    <a href="#order-info" class="order-button">Order Now!</a>
+                </div>
+
+                <div class="product-card">
+                    <h3>Sentence Interrupter</h3>
+                    <p>"I'm sorry, did the middle of my sentence interrupt the beginning of yours?!"</p>
+                    <span class="price">$4.99</span>
+                    <a href="#order-info" class="order-button">Order Now!</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="prints">
+            <h2>3D Printed Items (We used our allowance money for filament)</h2>
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <h3>Character Hopper</h3>
+                    <p>Simple crank operated hopping character. Different characters available. (We might run out of characters).</p>
+                    <span class="price">$2.99</span>
+                    <a href="#order-info" class="order-button">Order Now!</a>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="order" class="order-section">
+            <h2>Order Request (Don't send us weird stuff)</h2>
+            <p>Tip: Using a form helps avoid spam. You can also make a dedicated business email. Fast option: email an order request!</p>
+            
+            <h3>Email to order:</h3>
+            <p>Include item name, quantity, shipping town, and any custom text. (We only accept payment in imaginary gold coins or actual money, we'll figure it out).</p>
+            
+            <a href="mailto:yourbusiness@email.com?subject=Order%20Request%20from%20Sarcasm%20Spasm" class="order-button" id="order-info">Click Here to Email Your Order!</a>
+            
+            <!-- JavaScript for dynamic year in footer -->
+            <script>
+                document.getElementById("year").textContent = new Date().getFullYear();
+            </script>
+        </section>
+
     </div>
 
-    <nav class="nav">
-      <a href="#bags">Bags</a>
-      <a href="#prints">3D Prints</a>
-      <a href="#order">Order</a>
-    </nav>
-  </header>
+    <footer>
+        © <span id="year"></span> Sarcasm Spasm
+    </footer>
 
-  <main class="wrap">
-    <section class="hero">
-      <div>
-        <h2>Smart designs with even smarter remarks.</h2>
-        <p>
-          See something you like? Send an order request and we will reply with availability and cost.
-        </p>
-        <a class="button" href="#order">Order by email</a>
-      </div>
-    </section>
-
-    <section id="bags" class="section">
-      <h3>Bags</h3>
-      <div class="grid">
-        <article class="card">
-          <img src="images/bag1.png" alt="An Apple a Day" />
-          <div class="cardBody">
-            <h4>An Apple a Day</h4>
-            <p>"An apple a day keeps anyone away if you throw it hard enough".</p>
-            <div class="row">
-              <span class="price">$4.99</span>
-              <a class="button small" href="#order">Order</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="images/bag2.png" alt="Sublimated bag with meme design" />
-          <div class="cardBody">
-            <h4>Bad Sign</h4>
-            <p>"This is a bad sign"</p>
-            <div class="row">
-              <span class="price">$4.99</span>
-              <a class="button small" href="#order">Order</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="images/bag3.png" alt="Sublimated bag with meme design" />
-          <div class="cardBody">
-            <h4>Sock</h4>
-            <p>"I walk around like everything is fine but deep down my sock is slipping off"</p>
-            <div class="row">
-              <span class="price">$4.99</span>
-              <a class="button small" href="#order">Order</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="images/bag4.png" alt="Sublimated bag with meme design" />
-          <div class="cardBody">
-            <h4>Sentence</h4>
-            <p>"I'm sorry, did the middle of my sentence interrupt the beginning of yours?!"</p>
-            <div class="row">
-              <span class="price">$4.99</span>
-              <a class="button small" href="#order">Order</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="prints" class="section">
-      <h3>3D Printed Items</h3>
-      <div class="grid">
-        <article class="card">
-          <img src="images/print1.jpg" alt="3D printed item" />
-          <div class="cardBody">
-            <h4>Character Hopper</h4>
-            <p>Simple crank operated hopping character. Different characters available.</p>
-            <div class="row">
-              <span class="price">$2.99</span>
-              <a class="button small" href="#order">Order</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="order" class="section">
-      <h3>Order request</h3>
-      <p class="note">
-        Tip: Using a form helps avoid spam. You can also make a dedicated business email.
-      </p>
-
-      <!-- Option A: simple mailto (fast, but can be spammy if you show the email elsewhere) -->
-      <div class="orderBox">
-        <p><strong>Fast option:</strong> email an order request</p>
-        <a class="button" href="mailto:sarcasmspasm10@gmail.com?subject=Sarcasm%20Spasm%20Custom%20Order%20Request">Email to order</a>
-        <p class="tiny">
-          Include item name, quantity, shipping town, and any custom text.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="wrap footer">
-    <p>© <span id="year"></span> Sarcasm Spasm</p>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
